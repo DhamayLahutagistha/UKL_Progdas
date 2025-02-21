@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Moklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .video-section {
+            width: 70%;
+            background-color: black;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 400px;
+        }
+        .button-section {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button-section button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Prestasi Moklet</div>
+    <div class="container">
+        <div class="video-section">
+            <iframe 
+    id="videoFrame" 
+    src="https://www.youtube.com/embed/EDFy0J1niYw" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+        </div>
+        <div class="button-section">
+            <button onclick="changeVideo('https://www.youtube.com/embed/QqoteucWIrw?si=mF5-4uBqVVB4isCf')">Prestasi 1</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/tgbNymZ7vqY')">Prestasi 2</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/3JZ_D3ELwOQ')">Prestasi 3</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/pSmOobpB6KU')">Prestasi 4</button>
+            <button onclick="changeVideo('https://www.youtube.com/embed/J6l9K62NTzE')">Prestasi 5</button>
+        </div>
+    </div>
+    <div class="footer">🎉Selamat Datang di Website Prestasi Moklet! Lihat berbagai prestasi terbaru dari siswa terbaik kami! 🔥</div>
+    
+    <script>
+        function changeVideo(url) {
+            document.getElementById('videoFrame').src = url;
+        }
+    </script>
+</body>
+</html>
